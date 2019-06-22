@@ -8,7 +8,7 @@
    http://www.springframework.org/schema/context 
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<import resource="classpath:bank/config/user-beans.xml" />
+<!--	<import resource="classpath:bank/config/user-beans.xml" />-->
 
 	<context:component-scan base-package="bank.springmvc" />
 	<context:annotation-config />

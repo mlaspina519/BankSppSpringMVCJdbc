@@ -3,7 +3,7 @@ package bank.springmvc.daoimpl;
 import bank.springmvc.model.Account;
 import bank.springmvc.model.CheckingAccount;
 import bank.springmvc.model.SavingsAccount;
-import bank.springmvc.controller.BankingApplication;
+import bank.springmvc.clientsim.BankingApplication;
 import bank.springmvc.dao.AccountDao;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -13,9 +13,8 @@ import java.util.Random;
 
 public class AccountDaoImpl implements AccountDao {
 
-
-
     // Creates an account of specified type
+    @Override
     public void createAccount(String type, int userID) {
         Random rand = new Random();
 
@@ -30,6 +29,7 @@ public class AccountDaoImpl implements AccountDao {
     }
 
     // Finds an account, updates the balance with specified amount
+    @Override
     public void updateBalance(BigDecimal amount, int accountID) {
         try {
             amount = amount.setScale(2, RoundingMode.FLOOR);
@@ -43,6 +43,7 @@ public class AccountDaoImpl implements AccountDao {
     }
 
     // Deletes an account by specified account ID
+    @Override
     public void closeAccount(int accountID) {
         try {
             BankingApplication.CONNECTION.select("delete from bank_accounts" +
@@ -53,6 +54,7 @@ public class AccountDaoImpl implements AccountDao {
     }
 
     // Returns an Account based on Type
+    @Override
     public Account findAccountByType(int userID, String type) {
         try {
             String newType = type.toLowerCase();
@@ -78,6 +80,7 @@ public class AccountDaoImpl implements AccountDao {
     }
 
     // Returns Account ArrayList based on user ID
+    @Override
     public ArrayList<Account> findAccountByUserID(int userID) {
         try {
             ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_accounts where " +
@@ -87,7 +90,7 @@ public class AccountDaoImpl implements AccountDao {
             if(!rs.next()) {
                 return null;
             } else {
-                ArrayList<Account> accounts = new ArrayList<Account>();
+                ArrayList<Account> accounts = new ArrayList<>();
 
                 do {
                     if (rs.getString("account_type").equals("checking")) {
@@ -107,6 +110,7 @@ public class AccountDaoImpl implements AccountDao {
     }
 
     // Checks if an account of a specific type exists for user
+    @Override
     public boolean accountTypeExists(int userID, String type) {
         try {
             ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_accounts where " +
@@ -122,30 +126,8 @@ public class AccountDaoImpl implements AccountDao {
         return false;
     }
 
-    // Returns an Account object based on account ID
-    public Account findAccountByAccountID(int accountID) {
-        try {
-            ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_accounts where " +
-                    "account_id = " + accountID);
-
-            // If no accounts exist for accountID
-            if(!rs.next()) {
-                return null;
-            } else {
-                if (rs.getString("account_type").equals("Checking")) {
-                    return new CheckingAccount(rs.getBigDecimal("balance"), rs.getInt("account_id"), rs.getInt("user_id"));
-                } else if (rs.getString("account_type").equals("Savings")) {
-                    return new SavingsAccount(rs.getBigDecimal("balance"), rs.getInt("account_id"), rs.getInt("user_id"));
-                }
-            }
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
     // Returns the number of accounts a user has
+    @Override
     public int numberOfAccounts(int userID) {
         try {
             ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_accounts where " +
@@ -168,21 +150,5 @@ public class AccountDaoImpl implements AccountDao {
         }
 
         return 0;
-    }
-
-    // Lists all accounts a user currently has
-    public void listAccounts(int userID) {
-        try {
-            ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_accounts where " +
-                    "user_id='" + userID + "'");
-            while(rs.next()) {
-                String type = rs.getString("account_type");
-                BigDecimal balance = rs.getBigDecimal("balance");
-                int accountID = rs.getInt("account_id");
-                System.out.println(type + " Account ~ ID : " + accountID + " Balance : " + balance);
-            }
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
     }
 }

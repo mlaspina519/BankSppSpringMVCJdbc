@@ -1,11 +1,10 @@
 package bank.springmvc.controller;
 
+import bank.springmvc.clientsim.BankingApplication;
 import bank.springmvc.controllerimpl.ControllerMethods;
 import bank.springmvc.model.Account;
-import bank.springmvc.model.Transaction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;

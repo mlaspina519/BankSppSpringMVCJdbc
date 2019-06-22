@@ -1,6 +1,6 @@
 package bank.springmvc.daoimpl;
 
-import bank.springmvc.controller.BankingApplication;
+import bank.springmvc.clientsim.BankingApplication;
 import bank.springmvc.dao.TransactionDao;
 import bank.springmvc.model.Transaction;
 
@@ -9,8 +9,10 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class TransactionDaoImpl implements TransactionDao {
+
     // Updates DB to contain a transaction for specified
     // accountID : Type of transaction (Withdrawal/deposit) : amount added/removed
+    @Override
     public void processTransaction(int accountID, int userID, String transactionType, BigDecimal amount) {
         try {
             BankingApplication.CONNECTION.select("insert into bank_transactions " +
@@ -21,6 +23,7 @@ public class TransactionDaoImpl implements TransactionDao {
     }
 
     // Returns the number of transactions a user has
+    @Override
     public int numberOfTransactions(int userID) {
         try {
             ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_transactions where " +
@@ -46,6 +49,7 @@ public class TransactionDaoImpl implements TransactionDao {
     }
 
     // Deletes an account by specified account ID
+    @Override
     public void removeTransactions(int userID) {
         try {
             BankingApplication.CONNECTION.select("delete from bank_transactions" +
@@ -56,6 +60,7 @@ public class TransactionDaoImpl implements TransactionDao {
     }
 
     // Displays all transactions for a specified user
+    @Override
     public ArrayList<Transaction> findTransactionsByUserID(int userID) {
         try {
             ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_transactions where " +
@@ -65,7 +70,7 @@ public class TransactionDaoImpl implements TransactionDao {
                 return null;
             }
 
-            ArrayList<Transaction> transactions = new ArrayList<Transaction>();
+            ArrayList<Transaction> transactions = new ArrayList<>();
             int accountID;
             String transactionType;
             BigDecimal amount;

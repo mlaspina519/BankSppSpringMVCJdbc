@@ -1,21 +1,20 @@
 package bank.springmvc.daoimpl;
 
-import bank.springmvc.controller.BankingApplication;
+import bank.springmvc.clientsim.BankingApplication;
 import bank.springmvc.dao.AlertDao;
-
 import java.sql.ResultSet;
 
 public class AlertDaoImpl implements AlertDao {
+
     // Displays a message to user when account falls below a certain amount
+    @Override
     public void displayAlert(int accountID) {
         try {
             ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_alerts where " +
                     "account_id = " + accountID);
 
             // If no accounts exist for accountID
-            if(!rs.next()) {
-                return;
-            } else {
+            if(rs.next()) {
                 if(rs.getString("alert_enabled").equals("true")) {
                     System.out.println("ALERT : Account has dropped below $" + rs.getString("alert_level"));
                 }
@@ -26,6 +25,7 @@ public class AlertDaoImpl implements AlertDao {
     }
 
     // Updates alert amount for a specified account
+    @Override
     public void updateAlert(int accountID, double amount, String enabled) {
         try {
             ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_alerts where " +
@@ -45,6 +45,7 @@ public class AlertDaoImpl implements AlertDao {
     }
 
     // Checks if an account has alerts enabled
+    @Override
     public boolean alertsEnabled(int accountID) {
         try {
             ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_alerts where " +

@@ -6,17 +6,17 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class OracleDBConnection {
-    static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
-    static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
-    static final String DB_USER = "SYSTEM";
-    static final String DB_PASS = "1234";
-    Connection connection;
+    private static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
+    private static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
+    private static final String DB_USER = "SYSTEM";
+    private static final String DB_PASS = "1234";
+    private Connection connection;
 
     public OracleDBConnection() {
         connect();
     }
 
-    public void connect() {
+    private void connect() {
         try {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(DB_URL,
@@ -29,8 +29,7 @@ public class OracleDBConnection {
     ResultSet select(String query) {
         try {
             Statement statement = connection.createStatement();
-            ResultSet result = statement.executeQuery(query);
-            return result;
+            return statement.executeQuery(query);
         } catch(Exception ex) {
             System.out.println("ERORR while executing query");
             System.out.println(ex.toString());

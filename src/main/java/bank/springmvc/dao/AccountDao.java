@@ -8,11 +8,9 @@ import java.util.ArrayList;
 public interface AccountDao {
     void createAccount(String type, int userID);
     void closeAccount(int accountID);
-    void listAccounts(int userID);
     void updateBalance(BigDecimal amount, int accountID);
     boolean accountTypeExists(int userID, String type);
     int numberOfAccounts(int userID);
     ArrayList<Account> findAccountByUserID(int userID);
     Account findAccountByType(int userID, String type);
-    Account findAccountByAccountID(int accountID);
 }

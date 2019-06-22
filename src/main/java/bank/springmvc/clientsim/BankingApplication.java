@@ -1,4 +1,4 @@
-package bank.springmvc.controller;
+package bank.springmvc.clientsim;
 
 import bank.springmvc.dao.AccountDao;
 import bank.springmvc.dao.AlertDao;
@@ -14,7 +14,8 @@ public class BankingApplication {
     public static OracleDBConnection CONNECTION;        // Connection to DB
     public static AccountDao ACCOUNT_MANAGER;           // Manages all user accounts
     public static TransactionDao TRANSACTION_MANAGER;   // Manages all transactions
-    public static AlertDao ALERT_MANAGER;               // Manages all alerts
+    // TODO: change private -> public when alerts are implemented
+    private static AlertDao ALERT_MANAGER;            // Manages all alerts
 
     // Initializes important program-wide variables when logging in to web app
     public static void startup() {

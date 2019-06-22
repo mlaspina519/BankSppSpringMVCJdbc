@@ -1,6 +1,6 @@
 package bank.springmvc.model;
 
-import bank.springmvc.controller.BankingApplication;
+import bank.springmvc.clientsim.BankingApplication;
 
 import java.util.Random;
 
@@ -51,35 +51,19 @@ public abstract class User {
   }
 
   // Getters
-  public String getFirstName() {
-    return firstName;
-  }
-
+  public String getFirstName() { return firstName; }
   public String getLastName() {
     return lastName;
   }
-
-  public String getUserLogin() {
-    return userLogin;
-  }
-
+  public String getUserLogin() { return userLogin; }
   public String getPassword() {
     return password;
   }
-
   public String getUserType() {
     return userType;
   }
-
   public int getUserID() {
     return userID;
   }
 
-  // Prints out representation of a User
-  @Override
-  public String toString() {
-    return this.firstName + " " + this.lastName + "\n" +
-            this.userLogin + " : " + this.password + "\n" +
-            this.userType + " " + this.userID;
-  }
 }

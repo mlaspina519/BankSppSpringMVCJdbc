@@ -1,25 +1,17 @@
 package bank.springmvc.daoimpl;
 
-import bank.springmvc.controller.BankingApplication;
+import bank.springmvc.clientsim.BankingApplication;
 import bank.springmvc.dao.UserDao;
 import bank.springmvc.model.Customer;
 import bank.springmvc.model.Employee;
 import bank.springmvc.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 
-import javax.sql.DataSource;
 import java.sql.ResultSet;
 
 public class UserDaoImpl implements UserDao {
 
-//    @Autowired
-//    DataSource datasource;
-//
-//    @Autowired
-//    JdbcTemplate jdbcTemplate;
-
     // Removes a user from DB by specified user ID
+    @Override
     public void removeUser(String userLogin) {
         try {
             BankingApplication.CONNECTION.select("delete from Bank_users" +
@@ -30,6 +22,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     // Adds a user to DB by specified User object
+    @Override
     public void addUser(User user) {
         try {
             BankingApplication.CONNECTION.select("insert into bank_users " +
@@ -42,7 +35,8 @@ public class UserDaoImpl implements UserDao {
 
     // Updates a user with new first, last, login, pass
     // currentUserLogin is used to find the user to update
-    public boolean updateUserInfo(String first, String last, String userLogin, String pass, String currentUserLogin) {
+    @Override
+    public void updateUserInfo(String first, String last, String userLogin, String pass, String currentUserLogin) {
         try {
             ResultSet rs = BankingApplication.CONNECTION.select("select user_login from bank_users where " +
                     "user_login = '" + currentUserLogin + "'");
@@ -50,24 +44,19 @@ public class UserDaoImpl implements UserDao {
             if(rs.next()) {
                 //System.out.println(rs.getString("user_login"));
                 // System.out.println(userLogin);
-                if (rs.getString("user_login").equals(userLogin)) {
-                    return false;
-                } else {
+                if (!rs.getString("user_login").equals(userLogin)) {
                     BankingApplication.CONNECTION.select("update bank_users " +
                             "set first_name='" + first + "', last_name='" + last + "', user_login='" +
                             userLogin + "', user_pass='" + pass + "'" + " where user_login='" + currentUserLogin + "'");
-
-                    return true;
                 }
             }
         } catch(Exception ex) {
             ex.printStackTrace();
         }
-
-        return false;
     }
 
     // Finds user based on login name, returns User object
+    @Override
     public User findUser(String userLogin) {
         try {
             ResultSet rs = BankingApplication.CONNECTION.select("select * from Bank_users where " +

@@ -1,8 +1,8 @@
 package bank.springmvc.controller;
 
+import bank.springmvc.clientsim.BankingApplication;
 import bank.springmvc.controllerimpl.ControllerMethods;
 import bank.springmvc.model.Account;
-import bank.springmvc.model.Transaction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +13,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 @Controller
-
 public class EmployeeController {
 
     @RequestMapping(value = "/employee", method = RequestMethod.GET)

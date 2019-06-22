@@ -1,6 +1,5 @@
 package bank.springmvc.model;
 
-import bank.springmvc.clientsim.BankingApplication;
 import java.math.BigDecimal;
 
 public class Transaction {
@@ -15,11 +14,6 @@ public class Transaction {
         this.userID = userID;
         this.transactionType = transactionType;
         this.amount = amount;
-    }
-
-    void deleteTransaction() {
-        // Create transaction (withdraw all money w/e else)
-        BankingApplication.TRANSACTION_MANAGER.removeTransactions(this.userID);
     }
 
     public int getAccountID() {

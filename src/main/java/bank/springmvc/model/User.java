@@ -37,10 +37,6 @@ public abstract class User {
   // When a user is removed from DB, call delete() to remove all
   // existing accounts associated with user
   public void delete() {
-    // Delete all transactions associated with user
-    for(int i = 0; i < BankingApplication.TRANSACTION_MANAGER.numberOfTransactions(this.userID); i++) {
-      BankingApplication.TRANSACTION_MANAGER.findTransactionsByUserID(this.userID).get(i).deleteTransaction();
-    }
     // Delete all accounts associated with user
     for(int i = 0; i < BankingApplication.ACCOUNT_MANAGER.numberOfAccounts(this.userID); i++) {
       BankingApplication.ACCOUNT_MANAGER.findAccountByUserID(this.userID).get(i).deleteAccount();

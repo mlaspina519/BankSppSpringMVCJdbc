@@ -18,7 +18,7 @@ public abstract class Account {
     }
 
     public void deleteAccount() {
-        // Create transaction (withdraw all money w/e else)
+        // TODO: Create transaction (withdraw all money w/e else)
         BankingApplication.ACCOUNT_MANAGER.closeAccount(this.accountID);
     }
 

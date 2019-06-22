@@ -49890,7 +49890,7 @@
     </table>
     <table id="7161" parent="34" name="MVIEW$_ADV_FJG">
       <ObjectId>6376</ObjectId>
-      <Comment>Representation for query join sub-graph not in AJG </Comment>
+      <Comment>Representation for query join sub-graph not in AJG</Comment>
       <CreatedTimestamp>2019-02-03.23:48:34</CreatedTimestamp>
       <ModifiedTimestamp>2019-02-03.23:48:34</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>

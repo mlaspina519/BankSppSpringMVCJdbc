@@ -1,6 +1,6 @@
 package bank.springmvc.controllerimpl;
 
-import bank.springmvc.clientsim.BankingApplication;
+import bank.springmvc.BankingApplication;
 import bank.springmvc.model.Account;
 import bank.springmvc.model.Customer;
 import bank.springmvc.model.Transaction;

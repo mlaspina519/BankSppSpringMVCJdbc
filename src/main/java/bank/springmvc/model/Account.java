@@ -1,6 +1,6 @@
 package bank.springmvc.model;
 
-import bank.springmvc.clientsim.BankingApplication;
+import bank.springmvc.BankingApplication;
 import java.math.BigDecimal;
 
 public abstract class Account {

@@ -1,6 +1,6 @@
 package bank.springmvc.model;
 
-import bank.springmvc.clientsim.BankingApplication;
+import bank.springmvc.BankingApplication;
 
 import java.util.Random;
 

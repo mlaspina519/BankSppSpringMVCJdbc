@@ -1,13 +1,11 @@
 package bank.springmvc.controller;
 
-import bank.springmvc.clientsim.BankingApplication;
+import bank.springmvc.BankingApplication;
 import bank.springmvc.controllerimpl.ControllerMethods;
 import bank.springmvc.model.Account;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -15,7 +13,7 @@ import java.util.ArrayList;
 @Controller
 public class EmployeeController {
 
-    @RequestMapping(value = "/employee", method = RequestMethod.GET)
+    @GetMapping(value="/employee")
     public String showEmployeeMenu(Model model) {
 
         // Saves first name of user, and accounts user currently has
@@ -29,7 +27,7 @@ public class EmployeeController {
         return "employee";
     }
 
-    @RequestMapping(value= "updateEmployeeAccount", method = RequestMethod.POST)
+    @PostMapping(value="updateEmployeeAccount")
     public String processEmployeeAction(@RequestParam BigDecimal amount, @RequestParam String account) {
         // Updates balanced of specified account for currently logged in user
         ControllerMethods.updateAccountBalance(amount, account, BankingApplication.CURRENT_USER);
@@ -37,7 +35,7 @@ public class EmployeeController {
         return "redirect:/employee";
     }
 
-    @RequestMapping(value="/manageEmployeeAccounts", method = RequestMethod.POST)
+    @PostMapping(value="manageEmployeeAccounts")
     public String manageEmployeeAccounts(@RequestParam String accountOperation) {
 
         // Opens/Closes specified account for currently logged in user
@@ -46,7 +44,7 @@ public class EmployeeController {
         return "redirect:/employee";
     }
 
-    @RequestMapping(value="/manageOtherAccounts", method = RequestMethod.POST)
+    @PostMapping(value="manageOtherAccounts")
     public String manageOtherAccounts(@RequestParam String customerLogin, @RequestParam String accountOperation) {
 
         // Opens/Closes specified account for currently logged in user
@@ -55,7 +53,7 @@ public class EmployeeController {
         return "redirect:/employee";
     }
 
-    @RequestMapping(value="/employeeTransactions", method = RequestMethod.GET)
+    @GetMapping(value="employeeTransactions")
     public String showEmployeeTransactions(Model model) {
 
         // Displays transactions for currently logged in user
@@ -64,7 +62,7 @@ public class EmployeeController {
         return "transactions";
     }
 
-    @RequestMapping(value="/otherTransactions", method = RequestMethod.GET)
+    @GetMapping(value="otherTransactions")
     public String showCustomerTransactions(Model model, @RequestParam String customerLogin) {
 
         // Displays transactions for customer
@@ -73,7 +71,7 @@ public class EmployeeController {
         return "transactions";
     }
 
-    @RequestMapping(value="/updateEmployeeInfo", method = RequestMethod.POST)
+    @PostMapping(value="updateEmployeeInfo")
     public String updateEmployeeInfo(@RequestParam String first, @RequestParam String last,
                                      @RequestParam String login, @RequestParam String pass) {
 
@@ -83,7 +81,7 @@ public class EmployeeController {
         return "redirect:/employee";
     }
 
-    @RequestMapping(value="/updateInfoForCustomer", method = RequestMethod.POST)
+    @PostMapping(value="updateInfoForCustomer")
     public String updateInfoForCustomer(@RequestParam String customer, @RequestParam String first, @RequestParam String last,
                                      @RequestParam String login, @RequestParam String pass) {
 
@@ -93,7 +91,7 @@ public class EmployeeController {
         return "redirect:/employee";
     }
 
-    @RequestMapping(value="/createCustomer", method = RequestMethod.POST)
+    @PostMapping(value="createCustomer")
     public String createCustomer(@RequestParam String first, @RequestParam String last,
                                         @RequestParam String login, @RequestParam String pass) {
 
@@ -103,7 +101,7 @@ public class EmployeeController {
         return "redirect:/employee";
     }
 
-    @RequestMapping(value="/removeCustomer", method = RequestMethod.POST)
+    @PostMapping(value="removeCustomer")
     public String removeCustomer(@RequestParam String customer) {
 
         // Remove existing Customer
@@ -112,7 +110,7 @@ public class EmployeeController {
         return "redirect:/employee";
     }
 
-    @RequestMapping(value="/employeeTransfer", method = RequestMethod.POST)
+    @PostMapping(value="employeeTransfer")
     public String employeeTransfer(@RequestParam BigDecimal amount, @RequestParam String operation,
                                    @RequestParam String transferUser) {
 

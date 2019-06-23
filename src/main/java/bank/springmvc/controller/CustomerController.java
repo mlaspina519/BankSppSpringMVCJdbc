@@ -1,13 +1,11 @@
 package bank.springmvc.controller;
 
-import bank.springmvc.clientsim.BankingApplication;
+import bank.springmvc.BankingApplication;
 import bank.springmvc.controllerimpl.ControllerMethods;
 import bank.springmvc.model.Account;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -15,7 +13,7 @@ import java.util.ArrayList;
 @Controller
 public class CustomerController {
 
-    @RequestMapping(value ="/customer", method = RequestMethod.GET)
+    @GetMapping(value="/customer")
     public String showCustomerMenu(Model model) {
 
         // Saves first name of user, accounts user currently has
@@ -29,7 +27,7 @@ public class CustomerController {
         return "customer";
     }
 
-    @RequestMapping(value="/updateCustomerAccount", method = RequestMethod.POST)
+    @PostMapping(value="/updateCustomerAccount")
     public String updateCustomerAccount(@RequestParam BigDecimal amount, @RequestParam String account) {
 
         // Updates balanced of specified account for currently logged in user
@@ -38,7 +36,7 @@ public class CustomerController {
         return "redirect:/customer";
     }
 
-    @RequestMapping(value="/manageCustomerAccounts", method = RequestMethod.POST)
+    @PostMapping(value="/manageCustomerAccounts")
     public String manageCustomerAccounts(@RequestParam String accountOperation) {
 
         // Opens/Closes specified account for currently logged in user
@@ -47,7 +45,7 @@ public class CustomerController {
         return "redirect:/customer";
     }
 
-    @RequestMapping(value="/customerTransactions", method = RequestMethod.GET)
+    @PostMapping(value="/customerTransactions")
     public String showCustomerTransactions(Model model) {
 
         // Displays transactions for currently logged in user
@@ -56,7 +54,7 @@ public class CustomerController {
         return "transactions";
     }
 
-    @RequestMapping(value="/updateCustomerInfo", method = RequestMethod.POST)
+    @PostMapping(value="/updateCustomerInfo")
     public String updateCustomerInfo(@RequestParam String first, @RequestParam String last,
                                      @RequestParam String login, @RequestParam String pass) {
 
@@ -66,7 +64,7 @@ public class CustomerController {
         return "redirect:/customer";
     }
 
-    @RequestMapping(value="/customerTransfer", method = RequestMethod.POST)
+    @PostMapping(value="/customerTransfer")
     public String customerTransfer(@RequestParam BigDecimal amount, @RequestParam String operation,
                                    @RequestParam String transferUser) {
 

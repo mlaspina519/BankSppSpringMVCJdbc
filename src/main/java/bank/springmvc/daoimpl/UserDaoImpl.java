@@ -1,6 +1,6 @@
 package bank.springmvc.daoimpl;
 
-import bank.springmvc.clientsim.BankingApplication;
+import bank.springmvc.BankingApplication;
 import bank.springmvc.dao.UserDao;
 import bank.springmvc.model.Customer;
 import bank.springmvc.model.Employee;

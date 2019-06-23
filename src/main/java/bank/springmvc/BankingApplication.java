@@ -1,4 +1,4 @@
-package bank.springmvc.clientsim;
+package bank.springmvc;
 
 import bank.springmvc.dao.AccountDao;
 import bank.springmvc.dao.AlertDao;
@@ -11,7 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan("bank.springmvc")
 @SpringBootApplication
 public class BankingApplication extends SpringBootServletInitializer {
     public static boolean initialized = false;

@@ -77,7 +77,7 @@
 <!-- Updates Customer information, ALL fields required -->
 <form method="post" action="updateInfoForCustomer">
     <h2><b>Update Customer Info</b></h2>
-    Customer Login: <input type="text", name="customer" required/>
+    Customer Login: <input type="text" name="customer" required/>
     First Name: <input type="text" name="first" required/>
     Last Name: <input type="text" name="last" required/>
     New Login: <input type="text" name="login" required/>

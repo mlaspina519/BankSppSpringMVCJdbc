@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="BankAppDB" uuid="7c6cca25-01b0-4e9e-b88d-9411781ab384">
-      <database-info product="Oracle" version="Oracle Database 18c Express Edition Release 18.0.0.0.0 - Production" jdbc-version="4.0" driver-name="Oracle JDBC driver" driver-version="12.1.0.2.0" dbms="ORACLE" exact-version="18.0.0.0.0" exact-driver-version="12.1">
-        <extra-name-characters>$#</extra-name-characters>
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+    <data-source name="BankAppDB" uuid="a6b24ff6-58b8-479b-a7ea-aadf24aac23b">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="ORACLE" exact-version="0" />
       <secret-storage>master_key</secret-storage>
       <user-name>SYSTEM</user-name>
-      <introspection-schemas>*:@,PUBLIC</introspection-schemas>
     </data-source>
   </component>
 </project>

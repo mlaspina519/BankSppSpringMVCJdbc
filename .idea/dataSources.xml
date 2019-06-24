@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="BankAppDB" uuid="7c6cca25-01b0-4e9e-b88d-9411781ab384">
+    <data-source source="LOCAL" name="BankAppDB" uuid="a6b24ff6-58b8-479b-a7ea-aadf24aac23b">
       <driver-ref>oracle</driver-ref>
       <synchronize>true</synchronize>
       <auto-commit>false</auto-commit>

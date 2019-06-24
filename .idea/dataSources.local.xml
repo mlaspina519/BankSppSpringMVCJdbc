@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="BankAppDB" uuid="a6b24ff6-58b8-479b-a7ea-aadf24aac23b">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="ORACLE" exact-version="0" />
+    <data-source name="BankDB" uuid="c81aa9d0-5bf4-4819-a0e9-33d4705ef7ad">
+      <database-info product="PostgreSQL" version="11.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="11.4" exact-driver-version="42.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>SYSTEM</user-name>
+      <user-name>postgres</user-name>
+      <introspection-schemas>BankDB:*</introspection-schemas>
     </data-source>
   </component>
 </project>

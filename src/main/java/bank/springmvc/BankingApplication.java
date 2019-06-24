@@ -15,7 +15,7 @@ public class BankingApplication extends SpringBootServletInitializer {
     public static boolean initialized = false;
     public static UserDao USER_MANAGER;                 // Bank Object
     public static User CURRENT_USER;                    // User currently logged in to bank
-    public static OracleDBConnection CONNECTION;        // Connection to DB
+    public static PostGresDBConnection CONNECTION;        // Connection to DB
     public static AccountDao ACCOUNT_MANAGER;           // Manages all user accounts
     public static TransactionDao TRANSACTION_MANAGER;   // Manages all transactions
     // TODO: change private -> public when alerts are implemented
@@ -28,7 +28,7 @@ public class BankingApplication extends SpringBootServletInitializer {
     // Initializes important program-wide variables when logging in to web app
     public static void startup() {
         BankingApplication.USER_MANAGER = new UserDaoImpl();
-        BankingApplication.CONNECTION = new OracleDBConnection();
+        BankingApplication.CONNECTION = new PostGresDBConnection();
         BankingApplication.ACCOUNT_MANAGER = new AccountDaoImpl();
         BankingApplication.TRANSACTION_MANAGER = new TransactionDaoImpl();
         BankingApplication.ALERT_MANAGER = new AlertDaoImpl();

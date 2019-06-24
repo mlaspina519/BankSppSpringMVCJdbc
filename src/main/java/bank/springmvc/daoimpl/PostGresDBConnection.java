@@ -5,20 +5,20 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class OracleDBConnection {
-    private static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
-    private static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
-    private static final String DB_USER = "SYSTEM";
+public class PostGresDBConnection {
+   // private static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
+    private static final String DB_URL = "jdbc:postgresql://localhost:5432/BankDB";
+    private static final String DB_USER = "postgres";
     private static final String DB_PASS = "1234";
     private Connection connection;
 
-    public OracleDBConnection() {
+    public PostGresDBConnection() {
         connect();
     }
 
     private void connect() {
         try {
-            Class.forName(DRIVER);
+            //Class.forName(DRIVER);
             connection = DriverManager.getConnection(DB_URL,
                     DB_USER, DB_PASS);
         } catch(Exception ex) {

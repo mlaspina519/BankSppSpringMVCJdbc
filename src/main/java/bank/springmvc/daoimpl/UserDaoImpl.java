@@ -58,9 +58,9 @@ public class UserDaoImpl implements UserDao {
     // Finds user based on login name, returns User object
     @Override
     public User findUser(String userLogin) {
-        try {
-            ResultSet rs = BankingApplication.CONNECTION.select("select * from Bank_users where " +
-                    "user_login='" + userLogin + "'");
+        try {//select * from bank_users where user_login = 'soren'
+            ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_users where " +
+                    "user_login = '" + userLogin + "'");
 
             // If no user exists for userLogin, return null
             if(!rs.next()) {

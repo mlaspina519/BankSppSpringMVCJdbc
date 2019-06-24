@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="BankAppDB" uuid="a6b24ff6-58b8-479b-a7ea-aadf24aac23b">
-      <driver-ref>oracle</driver-ref>
+    <data-source source="LOCAL" name="BankDB" uuid="c81aa9d0-5bf4-4819-a0e9-33d4705ef7ad">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <auto-commit>false</auto-commit>
-      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
-      <jdbc-url>jdbc:oracle:thin:@localhost:1521:XE</jdbc-url>
-      <driver-properties>
-        <property name="v$session.program" value="DataGrip" />
-      </driver-properties>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/BankDB</jdbc-url>
     </data-source>
   </component>
 </project>

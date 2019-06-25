@@ -18,6 +18,7 @@ public class BankingApplication extends SpringBootServletInitializer {
     public static PostGresDBConnection CONNECTION;        // Connection to DB
     public static AccountDao ACCOUNT_MANAGER;           // Manages all user accounts
     public static TransactionDao TRANSACTION_MANAGER;   // Manages all transactions
+
     // TODO: change private -> public when alerts are implemented
     private static AlertDao ALERT_MANAGER;            // Manages all alerts
 

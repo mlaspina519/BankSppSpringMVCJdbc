@@ -6,7 +6,6 @@ import bank.springmvc.model.Customer;
 import bank.springmvc.model.Transaction;
 import bank.springmvc.model.User;
 import org.springframework.ui.Model;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 

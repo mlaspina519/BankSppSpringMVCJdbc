@@ -1,7 +1,6 @@
 package bank.springmvc.dao;
 
 import bank.springmvc.model.Account;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 

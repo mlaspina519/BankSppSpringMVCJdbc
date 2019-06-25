@@ -53,34 +53,4 @@ public class LoginController {
             BankingApplication.USER_MANAGER.findUser(login).getPassword().equals(pass);
   }
 
-
-
-//  @RequestMapping(value = "/login", method = RequestMethod.GET)
-//  public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
-//    ModelAndView mav = new ModelAndView("login");
-//    mav.addObject("login", new Login());
-//    return mav;
-//  }
-//
-//  @RequestMapping(value = "/login", method = RequestMethod.POST)
-//  public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
-//                                   @ModelAttribute("login") Login login) {
-//    // TODO: implement differently
-//    BankingApplication.startup();
-//
-//    ModelAndView mav;
-//
-//    if(BankingApplication.USER_MANAGER.findUser(login.getUsername()) != null) {
-//      mav = new ModelAndView("welcome");
-//      mav.addObject(login.getUsername());
-//
-//    } else {
-//      mav = new ModelAndView("login");
-//      mav.addObject("message", "username/password incorrect");
-//    }
-//
-//    return mav;
-//
-//  }
-
 }

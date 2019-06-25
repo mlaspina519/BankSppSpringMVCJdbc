@@ -5,10 +5,10 @@ import bank.springmvc.dao.UserDao;
 import bank.springmvc.model.Customer;
 import bank.springmvc.model.Employee;
 import bank.springmvc.model.User;
-
 import java.sql.ResultSet;
 
 public class UserDaoImpl implements UserDao {
+
 
     // Removes a user from DB by specified user ID
     @Override
@@ -58,7 +58,8 @@ public class UserDaoImpl implements UserDao {
     // Finds user based on login name, returns User object
     @Override
     public User findUser(String userLogin) {
-        try {//select * from bank_users where user_login = 'soren'
+        try {
+
             ResultSet rs = BankingApplication.CONNECTION.select("select * from bank_users where " +
                     "user_login = '" + userLogin + "'");
 

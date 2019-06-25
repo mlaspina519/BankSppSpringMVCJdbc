@@ -1,7 +1,6 @@
 package bank.springmvc.model;
 
 import bank.springmvc.BankingApplication;
-
 import java.util.Random;
 
 public abstract class User {

@@ -44,7 +44,7 @@ public class CustomerController {
         return "redirect:/customer";
     }
 
-    @PostMapping(value="/customerTransactions")
+    @GetMapping(value="/customerTransactions")
     public String showCustomerTransactions(Model model) {
 
         // Displays transactions for currently logged in user

@@ -28,9 +28,7 @@ public class PostGresDBConnection {
         try {
             Statement statement = connection.createStatement();
             return statement.executeQuery(query);
-        } catch(Exception ex) {
-            System.out.println("ERORR while executing query");
-            System.out.println(ex.toString());
+        } catch(Exception e) {
             return null;
         }
     }

@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 
 public class UserDaoImpl implements UserDao {
 
-
     // Removes a user from DB by specified user ID
     @Override
     public void removeUser(String userLogin) {

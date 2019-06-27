@@ -2,7 +2,10 @@ package bank.springmvc.controller;
 
 import bank.springmvc.BankingApplication;
 import bank.springmvc.controllerimpl.ControllerMethods;
+import bank.springmvc.dao.AccountDao;
+import bank.springmvc.dao.UserDao;
 import bank.springmvc.model.Account;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,12 +15,21 @@ import java.util.ArrayList;
 @Controller
 public class EmployeeController {
 
+    @Autowired
+    ControllerMethods controllerMethods;
+
+    @Autowired
+    AccountDao accountDao;
+
+    @Autowired
+    UserDao userDao;
+
     @GetMapping(value="/employee")
     public String showEmployeeMenu(Model model) {
 
         // Saves first name of user, and accounts user currently has
         String user = BankingApplication.CURRENT_USER.getFirstName();
-        ArrayList<Account> accounts = BankingApplication.ACCOUNT_MANAGER.findAccountByUserID(BankingApplication.CURRENT_USER.getUserID());
+        ArrayList<Account> accounts = accountDao.findAccountByUserID(BankingApplication.CURRENT_USER.getUserID());
 
         // Stores values to model to be displayed by JSP
         model.addAttribute("firstName", user);
@@ -29,7 +41,7 @@ public class EmployeeController {
     @PostMapping(value="updateEmployeeAccount")
     public String processEmployeeAction(@RequestParam BigDecimal amount, @RequestParam String account) {
         // Updates balanced of specified account for currently logged in user
-        ControllerMethods.updateAccountBalance(amount, account, BankingApplication.CURRENT_USER);
+        controllerMethods.updateAccountBalance(amount, account, BankingApplication.CURRENT_USER);
 
         return "redirect:/employee";
     }
@@ -38,7 +50,7 @@ public class EmployeeController {
     public String manageEmployeeAccounts(@RequestParam String accountOperation) {
 
         // Opens/Closes specified account for currently logged in user
-        ControllerMethods.manageAccount(BankingApplication.CURRENT_USER, accountOperation);
+        controllerMethods.manageAccount(BankingApplication.CURRENT_USER, accountOperation);
 
         return "redirect:/employee";
     }
@@ -47,7 +59,7 @@ public class EmployeeController {
     public String manageOtherAccounts(@RequestParam String customerLogin, @RequestParam String accountOperation) {
 
         // Opens/Closes specified account for currently logged in user
-        ControllerMethods.manageAccount(BankingApplication.USER_MANAGER.findUser(customerLogin), accountOperation);
+        //ControllerMethods.manageAccount(BankingApplication.USER_MANAGER.findUser(customerLogin), accountOperation);
 
         return "redirect:/employee";
     }
@@ -56,7 +68,7 @@ public class EmployeeController {
     public String showEmployeeTransactions(Model model) {
 
         // Displays transactions for currently logged in user
-        ControllerMethods.displayTransactions(BankingApplication.CURRENT_USER, BankingApplication.CURRENT_USER, model);
+        controllerMethods.displayTransactions(BankingApplication.CURRENT_USER, BankingApplication.CURRENT_USER, model);
 
         return "transactions";
     }
@@ -65,7 +77,7 @@ public class EmployeeController {
     public String showCustomerTransactions(Model model, @RequestParam String customerLogin) {
 
         // Displays transactions for customer
-        ControllerMethods.displayTransactions(BankingApplication.CURRENT_USER, BankingApplication.USER_MANAGER.findUser(customerLogin), model);
+        controllerMethods.displayTransactions(BankingApplication.CURRENT_USER, userDao.findUser(customerLogin), model);
 
         return "transactions";
     }
@@ -75,7 +87,7 @@ public class EmployeeController {
                                      @RequestParam String login, @RequestParam String pass) {
 
         // Updates Employee info
-        ControllerMethods.updateInfo(BankingApplication.CURRENT_USER, first, last, login, pass);
+        controllerMethods.updateInfo(BankingApplication.CURRENT_USER, first, last, login, pass);
 
         return "redirect:/employee";
     }
@@ -85,7 +97,7 @@ public class EmployeeController {
                                      @RequestParam String login, @RequestParam String pass) {
 
         // Updates Employee info
-        ControllerMethods.updateInfo(BankingApplication.USER_MANAGER.findUser(customer), first, last, login, pass);
+        controllerMethods.updateInfo(userDao.findUser(customer), first, last, login, pass);
 
         return "redirect:/employee";
     }
@@ -95,7 +107,7 @@ public class EmployeeController {
                                         @RequestParam String login, @RequestParam String pass) {
 
         // Create new Customer
-        ControllerMethods.createCustomer(first, last, login, pass);
+        controllerMethods.createCustomer(first, last, login, pass);
 
         return "redirect:/employee";
     }
@@ -104,7 +116,7 @@ public class EmployeeController {
     public String removeCustomer(@RequestParam String customer) {
 
         // Remove existing Customer
-        ControllerMethods.removeCustomer(customer);
+        //controllerMethods.removeCustomer(customer);
 
         return "redirect:/employee";
     }
@@ -115,9 +127,9 @@ public class EmployeeController {
 
         // Transfers money to another User, or between accounts
         if(operation.equals("Transfer To User")) {
-            ControllerMethods.transferMoney(amount, transferUser);
+            controllerMethods.transferMoney(amount, transferUser);
         } else {
-            ControllerMethods.transferMoney(amount, operation);
+            controllerMethods.transferMoney(amount, operation);
         }
 
         return "redirect:/employee";

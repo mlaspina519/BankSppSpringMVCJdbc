@@ -17,11 +17,6 @@ public abstract class Account {
         this.userID = userID;
     }
 
-    public void deleteAccount() {
-        // TODO: Create transaction (withdraw all money w/e else)
-        BankingApplication.ACCOUNT_MANAGER.closeAccount(this.accountID);
-    }
-
     // Getters
     public BigDecimal getBalance() { return balance; }
     public String getType() { return type; }

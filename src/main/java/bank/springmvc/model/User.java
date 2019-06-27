@@ -35,15 +35,15 @@ public abstract class User {
 
   // When a user is removed from DB, call delete() to remove all
   // existing accounts associated with user
-  public void delete() {
-    // Delete all accounts associated with user
-    for(int i = 0; i < BankingApplication.ACCOUNT_MANAGER.numberOfAccounts(this.userID); i++) {
-      BankingApplication.ACCOUNT_MANAGER.findAccountByUserID(this.userID).get(i).deleteAccount();
-    }
-
-    // Remove user from DB
-    BankingApplication.USER_MANAGER.removeUser(this.userLogin);
-  }
+//  public void delete() {
+//    // Delete all accounts associated with user
+//    for(int i = 0; i < accountDao.numberOfAccounts(this.userID); i++) {
+//      BankingApplication.ACCOUNT_MANAGER.findAccountByUserID(this.userID).get(i).deleteAccount();
+//    }
+//
+//    // Remove user from DB
+//    //BankingApplication.USER_MANAGER.removeUser(this.userLogin);
+//  }
 
   // Getters
   public String getFirstName() { return firstName; }

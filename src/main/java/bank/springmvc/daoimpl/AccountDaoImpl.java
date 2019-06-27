@@ -6,6 +6,7 @@ import bank.springmvc.model.CheckingAccount;
 import bank.springmvc.model.SavingsAccount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -15,7 +16,7 @@ import java.util.List;
 import java.util.Random;
 
 @Component
-public class AccountDaoImpl2 implements AccountDao {
+public class AccountDaoImpl implements AccountDao {
 
     @Autowired
     JdbcTemplate jdbcTemplate;

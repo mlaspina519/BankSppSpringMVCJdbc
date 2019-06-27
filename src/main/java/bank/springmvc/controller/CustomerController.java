@@ -1,7 +1,7 @@
 package bank.springmvc.controller;
 
 import bank.springmvc.BankingApplication;
-import bank.springmvc.controllerimpl.ControllerMethods;
+import bank.springmvc.controllerimpl.BankServices;
 import bank.springmvc.dao.AccountDao;
 import bank.springmvc.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class CustomerController {
     AccountDao accountDao;
 
     @Autowired
-    ControllerMethods controllerMethods;
+    BankServices bankServices;
 
     @GetMapping(value="/customer")
     public String showCustomerMenu(Model model) {
@@ -38,7 +38,7 @@ public class CustomerController {
     public String updateCustomerAccount(@RequestParam BigDecimal amount, @RequestParam String account) {
 
         // Updates balanced of specified account for currently logged in user
-        controllerMethods.updateAccountBalance(amount, account, BankingApplication.CURRENT_USER);
+        bankServices.updateAccountBalance(amount, account, BankingApplication.CURRENT_USER);
 
         return "redirect:/customer";
     }
@@ -47,7 +47,7 @@ public class CustomerController {
     public String manageCustomerAccounts(@RequestParam String accountOperation) {
 
         // Opens/Closes specified account for currently logged in user
-        controllerMethods.manageAccount(BankingApplication.CURRENT_USER, accountOperation);
+        bankServices.manageAccount(BankingApplication.CURRENT_USER, accountOperation);
 
         return "redirect:/customer";
     }
@@ -56,7 +56,7 @@ public class CustomerController {
     public String showCustomerTransactions(Model model) {
 
         // Displays transactions for currently logged in user
-        controllerMethods.displayTransactions(BankingApplication.CURRENT_USER, BankingApplication.CURRENT_USER, model);
+        bankServices.displayTransactions(BankingApplication.CURRENT_USER, BankingApplication.CURRENT_USER, model);
 
         return "transactions";
     }
@@ -66,7 +66,7 @@ public class CustomerController {
                                      @RequestParam String login, @RequestParam String pass) {
 
         // Updates customer info
-        controllerMethods.updateInfo(BankingApplication.CURRENT_USER, first, last, login, pass);
+        bankServices.updateInfo(BankingApplication.CURRENT_USER, first, last, login, pass);
 
         return "redirect:/customer";
     }
@@ -77,9 +77,9 @@ public class CustomerController {
 
         // Transfers money to another User, or between accounts
         if(operation.equals("Transfer To User")) {
-            controllerMethods.transferMoney(amount, transferUser);
+            bankServices.transferMoney(amount, transferUser);
         } else {
-            controllerMethods.transferMoney(amount, operation);
+            bankServices.transferMoney(amount, operation);
         }
 
         return "redirect:/customer";

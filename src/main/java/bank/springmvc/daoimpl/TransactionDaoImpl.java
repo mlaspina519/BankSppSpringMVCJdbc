@@ -1,9 +1,6 @@
 package bank.springmvc.daoimpl;
 
 import bank.springmvc.dao.TransactionDao;
-import bank.springmvc.model.Account;
-import bank.springmvc.model.CheckingAccount;
-import bank.springmvc.model.SavingsAccount;
 import bank.springmvc.model.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -13,12 +10,22 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ */
 @Component
-public class TransactionDaoImpl2 implements TransactionDao {
+public class TransactionDaoImpl implements TransactionDao {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
 
+    /**
+     *
+     * @param accountID
+     * @param userID
+     * @param transactionType
+     * @param amount
+     */
     @Override
     public void processTransaction(int accountID, int userID, String transactionType, BigDecimal amount) {
         jdbcTemplate.update("insert into bank_transactions " + "values(" + accountID + ", " + userID + ", '" + transactionType + "', " + amount + ")");
@@ -34,6 +41,11 @@ public class TransactionDaoImpl2 implements TransactionDao {
         return transactions;
     }
 
+    /**
+     * Returns the number of transactions a user has
+     * @param userID - ID of user that is being searched for
+     * @return - number of transactions for user
+     */
     @Override
     public int numberOfTransactions(int userID) {
         Integer count = jdbcTemplate.queryForObject("select count(*) from bank_transactions where user_id = " + userID , Integer.class);

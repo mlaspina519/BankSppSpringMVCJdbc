@@ -9,14 +9,13 @@ import bank.springmvc.model.Customer;
 import bank.springmvc.model.Transaction;
 import bank.springmvc.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
 @Service
-public class ControllerMethods {
+public class BankServices {
 
     @Autowired
     UserDao userDao;
@@ -86,18 +85,6 @@ public class ControllerMethods {
                 }
                 break;
         }
-
-
-        // TODO : add alert/overdraft
-        // TODO : give user feedback
-        /* Overdraft fee
-        if(amountAfterWithdrawal.compareTo(BigDecimal.ZERO) < 0) {
-             System.out.println("Balance dropped below $0. Overdraft penalty of $50.");
-             amountAfterWithdrawal = amountAfterWithdrawal.subtract(BigDecimal.valueOf(50));
-        }
-
-       // Will send an alert to user if enabled for this account
-        ALERT_MANAGER.displayAlert(currentAccount.getAccountID()); */
     }
 
     // Finds an account based on ID, deletes it
@@ -231,10 +218,10 @@ public class ControllerMethods {
     }
 
     // Finds customer in DB, if they exist then delete them, delete their accounts, delete their transactions
-//    public void removeCustomer(String login) {
-//        if(userDao.findUser(login) != null) {
-//            userDao.findUser(login).delete();
-//        }
-//    }
+    public void removeCustomer(String login) {
+        if(userDao.findUser(login) != null) {
+            userDao.findUser(login);
+        }
+    }
 }
 

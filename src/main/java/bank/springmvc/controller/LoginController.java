@@ -26,18 +26,18 @@ public class LoginController {
     // If they exist, redirect to appropriate menu (Employee/Customer)
     // Else, return to login screen
     if(!user.equals("") && !pass.equals("")) {
-      if(validateUser(user, pass)) {
-        // If user exists, sets Current User
-        BankingApplication.CURRENT_USER = userDao.findUser(user);
+        if(validateUser(user, pass)) {
+          // If user exists, sets Current User
+          BankingApplication.CURRENT_USER = userDao.findUser(user);
 
 
-        // Sends user to a menu page based on Employee/Customer type
-        if(BankingApplication.CURRENT_USER.getUserType().equals("Employee")) {
-          return "redirect:/employee";
-        } else if(BankingApplication.CURRENT_USER.getUserType().equals("Customer")) {
-          return "redirect:/customer";
+          // Sends user to a menu page based on Employee/Customer type
+          if(BankingApplication.CURRENT_USER.getUserType().equals("Employee")) {
+            return "redirect:/employee";
+          } else if(BankingApplication.CURRENT_USER.getUserType().equals("Customer")) {
+            return "redirect:/customer";
+          }
         }
-      }
     }
 
     // Reload login page
@@ -47,9 +47,5 @@ public class LoginController {
   // Searches DB for username/password combo, true if it exists, false otherwise
   private boolean validateUser(String login, String pass) {
     return userDao.findUser(login) != null && userDao.findUser(login).getPassword().equals(pass);
-
-//    return BankingApplication.USER_MANAGER.findUser(login) != null &&
-//            BankingApplication.USER_MANAGER.findUser(login).getPassword().equals(pass);
   }
-
 }

@@ -8,17 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-
 @Component
-public class UserDaoImpl2 implements UserDao {
+public class UserDaoImpl implements UserDao {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
 
     @Override
     public void removeUser(String userLogin) {
-        jdbcTemplate.update("delete from Bank_users" + " where user_login='" + userLogin + "'");
+        jdbcTemplate.update("delete from bank_accounts where user_id = " + findUser(userLogin).getUserID());
+        jdbcTemplate.update("delete from bank_users" + " where user_login='" + userLogin + "'");
     }
 
     // Updates a user with new first, last, login, pass
@@ -32,21 +31,22 @@ public class UserDaoImpl2 implements UserDao {
     // Finds user based on login name, returns User object
     @Override
     public User findUser(String userLogin) {
-        String userType = jdbcTemplate.queryForObject("select user_type from bank_users where user_login = '" + userLogin + "'", String.class);
+        String userType;
+
+        try {
+            userType = jdbcTemplate.queryForObject("select user_type from bank_users where user_login = '" + userLogin + "'", String.class);
+        } catch (Exception e) {
+            return null;
+        }
 
         // If user exists for userLogin, return Customer/Employee, else return null
-        if(userType != null) {
-            if(userType.equals("Customer")) {
-                List<Customer> customer = jdbcTemplate.query("select * from bank_users where user_login = '" + userLogin + "'", (rs, columnNum) ->
-                        new Customer(rs.getString("first_name"), rs.getString("last_name"), rs.getString("user_login"), rs.getString("user_pass"), rs.getInt("user_id")));
 
-                return customer.get(0);
-            } else if(userType.equals("Employee")) {
-                List<Employee> employee = jdbcTemplate.query("select * from bank_users where user_login = '" + userLogin + "'", (rs, columnNum) ->
-                        new Employee(rs.getString("first_name"), rs.getString("last_name"), rs.getString("user_login"), rs.getString("user_pass"), rs.getInt("user_id")));
-
-                return employee.get(0);
-            }
+        if(userType.equals("Customer")) {
+            return jdbcTemplate.queryForObject("select * from bank_users where user_login = '" + userLogin + "'", (rs,columnNum) ->
+                    new Customer(rs.getString("first_name"), rs.getString("last_name"), rs.getString("user_login"), rs.getString("user_pass"), rs.getInt("user_id")));
+        } else if(userType.equals("Employee")) {
+            return jdbcTemplate.queryForObject("select * from bank_users where user_login = '" + userLogin + "'", (rs,columnNum) ->
+                    new Employee(rs.getString("first_name"), rs.getString("last_name"), rs.getString("user_login"), rs.getString("user_pass"), rs.getInt("user_id")));
         }
 
         return null;

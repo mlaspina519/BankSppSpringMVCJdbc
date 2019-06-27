@@ -9,7 +9,7 @@ public interface AccountDao {
     void closeAccount(int accountID);
     void updateBalance(BigDecimal amount, int accountID);
     boolean accountTypeExists(int userID, String type);
-    int numberOfAccounts(int userID);
+    Integer numberOfAccounts(int userID);
     ArrayList<Account> findAccountByUserID(int userID);
     Account findAccountByType(int userID, String type);
 }

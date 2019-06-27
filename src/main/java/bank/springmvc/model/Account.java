@@ -1,6 +1,5 @@
 package bank.springmvc.model;
 
-import bank.springmvc.BankingApplication;
 import java.math.BigDecimal;
 
 public abstract class Account {
@@ -9,7 +8,13 @@ public abstract class Account {
     private int accountID;
     private int userID;
 
-    // Creates an account with all parameters given
+    /**
+     * Creates an Account with all values provided
+     * @param type Type of Account (Checking/Savings)
+     * @param balance Balance in Account
+     * @param accountID Unique Account ID
+     * @param userID User ID of Account owner
+     */
     Account(String type, BigDecimal balance, int accountID, int userID) {
         this.type = type;
         this.balance = balance;

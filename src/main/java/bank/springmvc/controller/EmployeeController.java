@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
+/**
+ * Controller for all Employee actions
+ */
 @Controller
 public class EmployeeController {
 

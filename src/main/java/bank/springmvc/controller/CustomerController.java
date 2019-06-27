@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
+/**
+ * Controller for all Customer actions
+ */
 @Controller
 public class CustomerController {
 

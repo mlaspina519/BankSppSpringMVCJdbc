@@ -14,6 +14,10 @@ import org.springframework.ui.Model;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
+/**
+ * Service Class that handles all of the Business Logic
+ * Takes information/request in from Controller, performs operations, sends to DAO layer
+ */
 @Service
 public class BankServices {
 
@@ -26,9 +30,12 @@ public class BankServices {
     @Autowired
     TransactionDao transactionDao;
 
-    // Updates specified account (based on ID)
-    // Adds or removes money to account based on button clicked (Deposit/Withdraw)
-    // Processes a transaction
+    /**
+     * Updates specified Account with a new Balance, Processes a Transaction
+     * @param amount Amount of money
+     * @param transactionType Type of Transaction (Deposit/Withdrawal, Checking/Savings)
+     * @param user User Object to act upon
+     */
     public void updateAccountBalance(BigDecimal amount, String transactionType, User user) {
 
         switch(transactionType) {
@@ -87,7 +94,11 @@ public class BankServices {
         }
     }
 
-    // Finds an account based on ID, deletes it
+    /**
+     * Performs a specified Account Operation on a User
+     * @param user User to search for
+     * @param accountOperation Operation to be done (Open/Close, Checking/Savings)
+     */
     public void manageAccount(User user, String accountOperation) {
         switch(accountOperation) {
             case "Close Savings Account":
@@ -121,14 +132,23 @@ public class BankServices {
         // TODO: process remaining money, create transaction, whatever else
     }
 
-    // Allows user to enter in new first name, last name, login, password
-    // If username is available (no other user exists with that login), updates all info
+    /**
+     * Allows User to enter in new information, excluding Type and ID
+     * @param user User to update
+     * @param first New first name
+     * @param last New last name
+     * @param login New login
+     * @param pass New password
+     */
     public void updateInfo(User user, String first, String last, String login, String pass) {
-        userDao.updateUserInfo(first, last, login, pass, user.getUserLogin());
         userDao.updateUserInfo(first, last, login, pass, user.getUserLogin());
     }
 
-    // Allows user to transfer money either between accounts, or to another user
+    /**
+     * Allows User to transfer money between Accounts or to another User
+     * @param amount Amount to transfer
+     * @param transferType Type of Transfer (To savings/To checking/To user)
+     */
     public void transferMoney(BigDecimal amount, String transferType) {
         if(transferType.equals("Transfer To Savings")) {
             // Checks that user has a checking account and a savings account
@@ -193,7 +213,12 @@ public class BankServices {
         }
     }
 
-    // Displays transactions for a user
+    /**
+     * Displays Transactions for a specified User
+     * @param callingUser User that called this method
+     * @param user User that is going to have Transactions shown
+     * @param model Model to print Transactions to
+     */
     public void displayTransactions(User callingUser, User user, Model model) {
         // Stores first name, user type, and transactions for specified user
         String firstName = user.getFirstName();
@@ -210,17 +235,26 @@ public class BankServices {
         model.addAttribute("firstName", firstName);
     }
 
-    // Creates new customer with specified information if one does not exist with that login
+    /**
+     * Create a new Customer
+     * @param first First name
+     * @param last Last name
+     * @param login Login
+     * @param pass Password
+     */
     public void createCustomer(String first, String last, String login, String pass) {
         if(userDao.findUser(login) == null) {
             userDao.addUser(new Customer(first, last, login, pass));
         }
     }
 
-    // Finds customer in DB, if they exist then delete them, delete their accounts, delete their transactions
+    /**
+     * Removes an existing Customer if they exist in DB, and their Accounts
+     * @param login Login of Customer to be removed
+     */
     public void removeCustomer(String login) {
         if(userDao.findUser(login) != null) {
-            userDao.findUser(login);
+            userDao.removeUser(login);
         }
     }
 }

@@ -7,22 +7,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1d90d92-ee28-4db8-b129-c7949960e148" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/BankingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/BankingApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/controllerimpl/ControllerMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/controllerimpl/BankServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/controllerimpl/BankServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/controllerimpl/BankServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/AccountDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/AccountDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/AlertDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AccountDaoImpl2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AccountDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AlertDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AlertDaoImpl2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/TransactionDaoImpl2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/TransactionDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/UserDaoImpl2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/TransactionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/TransactionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AccountDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/TransactionDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/TransactionDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/CheckingAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/CheckingAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/DBProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/DBProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/SavingsAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/SavingsAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/springmvc/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/ojdbc8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,13 +87,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/controller/EmployeeController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="136" column="1" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -97,8 +98,95 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/controllerimpl/BankServices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="220" column="30" selection-start-line="220" selection-start-column="16" selection-end-line="220" selection-end-column="30" />
+            <state relative-caret-position="1043">
+              <caret line="248" column="5" lean-forward="true" selection-start-line="248" selection-start-column="5" selection-end-line="248" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#BankServices#0" />
+                <element signature="docComment;method#updateAccountBalance#0;class#BankServices#0" />
+                <element signature="docComment;method#manageAccount#0;class#BankServices#0" />
+                <element signature="docComment;method#updateInfo#0;class#BankServices#0" />
+                <element signature="docComment;method#transferMoney#0;class#BankServices#0" />
+                <element signature="docComment;method#displayTransactions#0;class#BankServices#0" />
+                <element signature="docComment;method#createCustomer#0;class#BankServices#0" />
+                <element signature="docComment;method#removeCustomer#0;class#BankServices#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/UserDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-162">
+              <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#UserDaoImpl#0" />
+                <element signature="docComment;method#removeUser#0;class#UserDaoImpl#0" />
+                <element signature="docComment;method#addUser#0;class#UserDaoImpl#0" />
+                <element signature="docComment;method#findUser#0;class#UserDaoImpl#0" />
+                <element signature="docComment;method#updateUserInfo#0;class#UserDaoImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AccountDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="603">
+              <caret line="157" column="43" lean-forward="true" selection-start-line="157" selection-start-column="43" selection-end-line="157" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#AccountDaoImpl#0" />
+                <element signature="docComment;method#createAccount#0;class#AccountDaoImpl#0" />
+                <element signature="docComment;method#closeAccount#0;class#AccountDaoImpl#0" />
+                <element signature="docComment;method#updateBalance#0;class#AccountDaoImpl#0" />
+                <element signature="docComment;method#accountTypeExists#0;class#AccountDaoImpl#0" />
+                <element signature="docComment;method#numberOfAccounts#0;class#AccountDaoImpl#0" />
+                <element signature="docComment;method#findAccountByUserID#0;class#AccountDaoImpl#0" />
+                <element signature="docComment;method#findAccountByType#0;class#AccountDaoImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/TransactionDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="586">
+              <caret line="62" column="36" lean-forward="true" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#processTransaction#0;class#TransactionDaoImpl#0" />
+                <element signature="docComment;method#findTransactionsByUserID#0;class#TransactionDaoImpl#0" />
+                <element signature="docComment;method#numberOfTransactions#0;class#TransactionDaoImpl#0" />
+                <element signature="docComment;method#removeTransactions#0;class#TransactionDaoImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#LoginController#0" />
+                <element signature="docComment;method#validateUser#0;class#LoginController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/controller/EmployeeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,10 +195,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/User.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/TransactionDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+            <state relative-caret-position="187">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,7 +210,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/AccountDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,61 +219,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/UserDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/TransactionDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="27" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="289">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#Account#0;class#Account#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/TransactionDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/CheckingAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/Customer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/SavingsAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -240,11 +280,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/transactions.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/BankingApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Login.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/TransactionDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/CheckingAccount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/SavingsAccount.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Transaction.java" />
         <option value="$PROJECT_DIR$/.classpath" />
         <option value="$PROJECT_DIR$/.project" />
         <option value="$PROJECT_DIR$/.springBeans" />
@@ -257,30 +293,34 @@
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/clientsim/BankingApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/PostGreDBConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/DBProperties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/PostGresDBConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AlertDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AccountDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/TransactionDaoImpl2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Account.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/BankingApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/controllerimpl/ControllerMethods.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AccountDaoImpl2.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/UserDaoImpl2.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AlertDaoImpl2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/DBProperties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/AccountDao.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/BankingApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/controllerimpl/BankServices.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/SavingsAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/DBProperties.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/CheckingAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/model/Account.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/TransactionDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/AccountDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AccountDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/dao/TransactionDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/controllerimpl/BankServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bank/springmvc/controller/EmployeeController.java" />
       </list>
     </option>
   </component>
@@ -312,7 +352,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -418,6 +457,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -715,7 +755,9 @@
       <workItem from="1561570994887" duration="621000" />
       <workItem from="1561574490522" duration="2455000" />
       <workItem from="1561585139366" duration="8861000" />
-      <workItem from="1561603257433" duration="3030000" />
+      <workItem from="1561603257433" duration="3225000" />
+      <workItem from="1561612109510" duration="911000" />
+      <workItem from="1561652277813" duration="3857000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1561160115895</created>
@@ -773,11 +815,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561593759313</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed bug with null login, converting documentation">
+      <created>1561606341919</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1561606341919</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90480000" />
+    <option name="totallyTimeSpent" value="95443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -793,7 +842,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.43661973" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.43661973" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -823,6 +872,8 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Cleaned up code" />
     <MESSAGE value="Converted to Spring Boot app" />
     <MESSAGE value="Updated RequestMapping -&gt; Post/GetMapping" />
@@ -830,7 +881,8 @@
     <MESSAGE value="converted to postgres" />
     <MESSAGE value="Cleaning up extra code" />
     <MESSAGE value="Converted from static methods/java DB initialization to autowiring and jdbc templates.&#10;&#10;TODO: need to fix the user delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Converted from static methods/java DB initialization to autowiring and jdbc templates.&#10;&#10;TODO: need to fix the user delete" />
+    <MESSAGE value="Fixed bug with null login, converting documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with null login, converting documentation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc-servlet.xml" />
@@ -876,24 +928,10 @@
     <entry file="file://$PROJECT_DIR$/BankApp.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="68" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="69" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -918,40 +956,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/PostGresDBConnection.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/UserDaoImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AccountDaoImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/TransactionDaoImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/AlertDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/AlertDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/transactions.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AccountDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="60" column="56" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -962,81 +971,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AlertDaoImpl.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        <state relative-caret-position="323">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AlertDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="15" lean-forward="true" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AlertDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="e#0#2349#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/BankingApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/DBProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1243#1244#0" expanded="true" />
-            <element signature="e#1274#1275#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1361#1362#0" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-            <element signature="e#1433#1434#0" expanded="true" />
-            <element signature="e#1480#1481#0" expanded="true" />
-            <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#1556#1557#0" expanded="true" />
-            <element signature="e#1582#1583#0" expanded="true" />
-            <element signature="e#1619#1620#0" expanded="true" />
-            <element signature="e#1649#1650#0" expanded="true" />
-            <element signature="e#1697#1698#0" expanded="true" />
-            <element signature="e#1735#1736#0" expanded="true" />
-            <element signature="e#1796#1797#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-            <element signature="e#1892#1893#0" expanded="true" />
-            <element signature="e#1920#1921#0" expanded="true" />
-            <element signature="e#1965#1966#0" expanded="true" />
-            <element signature="e#1999#2000#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="527">
+          <caret line="31" column="69" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/controller/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        <state relative-caret-position="187">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1045,70 +998,174 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <element signature="docComment;method#Transaction#0;class#Transaction#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/BankingApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/SavingsAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/CheckingAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/AccountDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/UserDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="96" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="96" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;method#Employee#0;class#Employee#0" />
+            <element signature="docComment;method#Employee#1;class#Employee#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/SavingsAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <element signature="docComment;method#SavingsAccount#0;class#SavingsAccount#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;method#Customer#0;class#Customer#0" />
+            <element signature="docComment;method#Customer#1;class#Customer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/DBProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;method#datasource#0;class#DBProperties#0" />
+            <element signature="docComment;method#jdbcTemplate#0;class#DBProperties#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/CheckingAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;method#CheckingAccount#0;class#CheckingAccount#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+        <state relative-caret-position="544">
+          <caret line="47" column="3" lean-forward="true" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;method#User#0;class#User#0" />
+            <element signature="docComment;method#User#1;class#User#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/model/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="docComment;method#Account#0;class#Account#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#UserDaoImpl#0" />
+            <element signature="docComment;method#removeUser#0;class#UserDaoImpl#0" />
+            <element signature="docComment;method#addUser#0;class#UserDaoImpl#0" />
+            <element signature="docComment;method#findUser#0;class#UserDaoImpl#0" />
+            <element signature="docComment;method#updateUserInfo#0;class#UserDaoImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/TransactionDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="62" column="36" lean-forward="true" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#processTransaction#0;class#TransactionDaoImpl#0" />
+            <element signature="docComment;method#findTransactionsByUserID#0;class#TransactionDaoImpl#0" />
+            <element signature="docComment;method#numberOfTransactions#0;class#TransactionDaoImpl#0" />
+            <element signature="docComment;method#removeTransactions#0;class#TransactionDaoImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/AccountDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="157" column="43" lean-forward="true" selection-start-line="157" selection-start-column="43" selection-end-line="157" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#AccountDaoImpl#0" />
+            <element signature="docComment;method#createAccount#0;class#AccountDaoImpl#0" />
+            <element signature="docComment;method#closeAccount#0;class#AccountDaoImpl#0" />
+            <element signature="docComment;method#updateBalance#0;class#AccountDaoImpl#0" />
+            <element signature="docComment;method#accountTypeExists#0;class#AccountDaoImpl#0" />
+            <element signature="docComment;method#numberOfAccounts#0;class#AccountDaoImpl#0" />
+            <element signature="docComment;method#findAccountByUserID#0;class#AccountDaoImpl#0" />
+            <element signature="docComment;method#findAccountByType#0;class#AccountDaoImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/TransactionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/AccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1117,38 +1174,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/controllerimpl/BankServices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="220" column="30" selection-start-line="220" selection-start-column="16" selection-end-line="220" selection-end-column="30" />
+        <state relative-caret-position="1043">
+          <caret line="248" column="5" lean-forward="true" selection-start-line="248" selection-start-column="5" selection-end-line="248" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#BankServices#0" />
+            <element signature="docComment;method#updateAccountBalance#0;class#BankServices#0" />
+            <element signature="docComment;method#manageAccount#0;class#BankServices#0" />
+            <element signature="docComment;method#updateInfo#0;class#BankServices#0" />
+            <element signature="docComment;method#transferMoney#0;class#BankServices#0" />
+            <element signature="docComment;method#displayTransactions#0;class#BankServices#0" />
+            <element signature="docComment;method#createCustomer#0;class#BankServices#0" />
+            <element signature="docComment;method#removeCustomer#0;class#BankServices#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LoginController#0" />
+            <element signature="docComment;method#validateUser#0;class#LoginController#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/controller/EmployeeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="136" column="1" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/dao/TransactionDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bank/springmvc/daoimpl/TransactionDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="255">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
